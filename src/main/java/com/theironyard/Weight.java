@@ -10,32 +10,15 @@ package com.theironyard;
  * Follow the instructions below to build the Weight enum.
  */
 public enum Weight {
+    TON(907184.74),
+    POUND(453.59237),
+    OUNCE(28.349523),
+    STONE(6350.2932),
+    METRIC_TON(1000000),
+    KILOGRAM(1000),
+    GRAM(1);
 
-    /*
-        Create enum values for the following. Be sure to follow standard naming conventions!!
-
-        1 ton = 907184.74 grams
-        1 pound = 453.59237 grams
-        1 ounce = 28.349523 grams
-        1 stone = 6350.2932 grams
-        1 metric ton = 1000000 grams
-        1 kilogram = 1000 grams
-        1 gram = 1 gram
-
-        Remember that enums can call a constructor. For example:
-
-        FURLONG(123)
-     */
-    // todo: create enums that call a constructor to set their weight in grams
-
-
-
-    /**
-     * Create a property that holds the enum value's weight in grams. This is
-     * provided to and set by the Weight() constructor.
-     */
-    // todo: Create a private double property that holds the enum instance's weight in grams.
-
+    private double grams;
 
     /**
      * Create a constructor for the Weight enum. It should accept an argument
@@ -43,6 +26,9 @@ public enum Weight {
      * @param grams The enum instance's weight in grams.
      */
     // todo: create constructor
+    Weight(double grams) {
+        this.grams = grams;
+    }
 
 
     /**
@@ -51,6 +37,10 @@ public enum Weight {
      * @return The enum's weight in grams
      */
     // todo: create getGrams() method
+    public double getGrams(){
+        return grams;
+    }
+
 
 
 }
